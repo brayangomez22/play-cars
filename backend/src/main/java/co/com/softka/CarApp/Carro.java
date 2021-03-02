@@ -5,7 +5,9 @@ public class Carro {
     private int idCar;
     private String Apodo;
 
-    public Carro( String apodo) {
+    private int idCarril;
+
+    public Carro(String apodo) {
         Apodo = apodo;
     }
 
@@ -28,7 +30,14 @@ public class Carro {
         Apodo = apodo;
     }
 
+    public int getIdCarril() {
+        return idCarril;
+    }
+
+    public void setIdCarril(int idCarril) { this.idCarril = idCarril; }
+
     public double Avanzar(){
         return Math.ceil(Math.random()*6)*100;
     }
+
 }

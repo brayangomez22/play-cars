@@ -1,6 +1,6 @@
 package co.com.softka.CarApp;
 
-public class Carril extends Conductor{
+public class Carril{
     private int idCarril;
     private int numeroCarril;
     private double porcentajeTotal;
@@ -8,7 +8,6 @@ public class Carril extends Conductor{
 
 
     public Carril( String apodo, String documento, String nombre, int numeroCarril, double distancia) {
-        super(apodo, documento, nombre);
         this.numeroCarril = numeroCarril;
         this.distancia = distancia;
     }

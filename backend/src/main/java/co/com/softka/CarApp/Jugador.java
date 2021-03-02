@@ -3,12 +3,16 @@ package co.com.softka.CarApp;
 public class Jugador {
 
     private int idJugador;
-    private String nombre;
+    private String nombreJugador;
     private int vecesWinner;
 
-    public Jugador(String nombre, int vecesWinner) {
-        this.nombre = nombre;
+    public Jugador(String nombreJugador, int vecesWinner) {
+        this.nombreJugador = nombreJugador;
         this.vecesWinner = vecesWinner;
+    }
+
+    public Jugador(String nombreJugador) {
+        this.nombreJugador = nombreJugador;
     }
 
     public Jugador() {
@@ -22,12 +26,12 @@ public class Jugador {
         this.idJugador = idJugador;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombreJugador() {
+        return nombreJugador;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombreJugador(String nombreJugador) {
+        this.nombreJugador = nombreJugador;
     }
 
     public int getVecesWinner() {

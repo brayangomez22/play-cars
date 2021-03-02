@@ -49,9 +49,9 @@ p {
 
 .textHeader .icon {
 	font-size: 10px;
-  width: 90px;
-  height: 90px;
-  margin: 0 auto;
+	width: 90px;
+	height: 90px;
+	margin: 0 auto;
 }
 
 .textHeader .title {
@@ -135,7 +135,7 @@ main .letter-capital {
 }
 
 /* ------------------------- */
-/* Animaciones */
+/* Animations */
 /* ------------------------- */
 @keyframes blue-neon {
 	0%, 10%, 15%, 20%, 30%, 35%, 40%, 50%, 55%, 60%, 70%, 75%, 80%, 85%, 90%, 100% {
@@ -160,4 +160,241 @@ main .letter-capital {
 	10%, 15%, 60% {
 		text-shadow: none;
 	}
+}
+
+/* ------------------------- */
+/* Game */
+/* ------------------------- */
+.containerGame{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+	background-image: url(../img/bg-header-black.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	box-shadow: inset 0 0 100px 150px rgba(0,0,0,8);
+}
+
+.containerGame .container{
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background: rgba(13, 17, 23, 0.5);
+    box-shadow: 0 2px 5px #fff;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.containerGame .container .players{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.containerGame .container .players .imgBx{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.containerGame .container .players .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.containerGame .container .players .formBx{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background: rgba(13, 17, 23, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    transition: 0.5s;
+}
+
+.containerGame .container .players .formBx form h2,
+.containerGame .container .players .formBx div h2{
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+    color: #3485ff;
+}
+
+.containerGame .container .players .formBx form input{
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    background: #fff;
+    color: #333;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    margin: 8px 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+.containerGame .container .players .formBx form input[type="submit"]{
+    max-width: 100px;
+    background: #3485ff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+.containerGame .container .players .formBx form .watch,
+.containerGame .container .players .formBx div .watch{
+    position: relative;
+    margin-top: 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: rgb(204, 197, 197);
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.containerGame .container .players .formBx form .watch a,
+.containerGame .container .players .formBx div .watch a{
+    font-weight: 600;
+    text-decoration: none;
+    color: #3485ff;
+}
+
+.containerGame .container .players .box{
+	width: 320px;
+	border-bottom: 20px solid #3485ff;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.containerGame .container .players .box h3{
+	color: #fff;
+	background: #3485ff;
+	padding: 10px 20px;
+	font-size: 20px;
+	font-weight: 700;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.containerGame .container .players .box ul{
+	position: relative;
+	background: #fff;
+}
+
+.containerGame .container .players .box ul li{
+	list-style: none;
+	padding: 10px;
+	width: 100%;
+	background: #fff;
+	box-shadow: 0 5px 25px rgba(0, 0, 0, .1);
+	transition: transform 0.5s;
+}
+
+.containerGame .container .players .box ul:hover li{
+	opacity: 0.2;
+}
+
+.containerGame .container .players .box ul li:hover{
+	transform: scale(1.1);
+	z-index: 100;
+	background: #3485ff;
+	box-shadow: 0 5px 25px rgba(0, 0, 0, .2);
+	color: #fff;
+	opacity: 1;
+}
+
+.containerGame .container .players .box ul li span{
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	background: #3485ff;
+	color: #fff;
+	display: inline-block;
+	border-radius: 50%;
+	margin-right: 10px;
+	font-size: 12px;
+	font-weight: 600;
+	transform: translateY(-2px);
+}
+
+.containerGame .container .players .box ul li:hover span{
+	background: #fff;
+	color: #3485ff;
+}
+
+.containerGame .container .playerList{
+    pointer-events: none;
+} 
+
+.containerGame .container.active .playerList{
+    pointer-events: initial;
+}
+
+.containerGame .container .playerList .formBx{
+    left: 100%;
+}
+
+.containerGame .container.active .playerList .formBx{
+    left: 0;
+}
+
+.containerGame .container .playerList .imgBx{
+    left: -100%;
+}
+
+.containerGame .container.active .playerList .imgBx{
+    left: 0;
+}
+
+
+.containerGame .container .createPlayer .formBx{
+    left: 0;
+}
+
+.containerGame .container.active .createPlayer .formBx{
+    left: 100%;
+}
+
+.containerGame .container .createPlayer .imgBx{
+    left: 0;
+}
+
+.containerGame .container.active .createPlayer .imgBx{
+    left: -100%;
+}
+
+@media (max-width: 991px){
+    .containerGame .container{
+        max-width: 400px;
+    }
+    .containerGame .container .imgBx{
+        display: none;
+    }
+    .containerGame .container .players .formBx{
+        width: 100%;
+    }
 }

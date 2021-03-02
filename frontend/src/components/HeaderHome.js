@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';  
 import car from '../img/car.svg'
 
 const HeaderHome = () => {
@@ -18,7 +19,7 @@ const HeaderHome = () => {
                     No olvides que todo lo que te propongas lo puedes lograr.
                 </p>
                 <a href="#main" class="btn-link text-regular">Más información</a>
-                <a href="#main" class="btn-link text-regular">Comenzar</a>
+                <Link to="/game" className="btn-link text-regular">Comenzar</Link>
             </div>
 	    </header>
     );

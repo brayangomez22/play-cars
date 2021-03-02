@@ -10,7 +10,7 @@ const HeaderHome = () => {
                 </p>
                 <h1 class="title">
                     Carreras con Brayan<br></br>¡Entra Ya!<br></br>
-                    <span class="title-orange-neon text-regular">Si ganas, me ganas amí</span>
+                    <span class="title-orange-neon text-regular">Si ganas, me ganas a mí</span>
                 </h1>
                 <p class="description">
                     Tenemos nuevos puestos para ti<br></br>
@@ -18,6 +18,7 @@ const HeaderHome = () => {
                     No olvides que todo lo que te propongas lo puedes lograr.
                 </p>
                 <a href="#main" class="btn-link text-regular">Más información</a>
+                <a href="#main" class="btn-link text-regular">Comenzar</a>
             </div>
 	    </header>
     );

@@ -81,6 +81,7 @@ p {
 .btn-link {
 	display: inline-block;
 	padding: 15px 30px;
+	margin: 0 15px;
 	border: 6px dotted #d79e5b;
 	border-radius: 60px;
 	color: #fff;

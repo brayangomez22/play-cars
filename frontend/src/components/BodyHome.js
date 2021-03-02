@@ -5,8 +5,6 @@ const BodyHome = () => {
         const header = document.getElementById('containerHeader');
         header.style.opacity = '1' - window.pageYOffset / 550;
     });
-    
-
     return (
         <main id="main">
             <section class="container">

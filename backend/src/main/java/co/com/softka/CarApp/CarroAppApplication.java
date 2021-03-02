@@ -1,13 +1,13 @@
-package com.example.backend;
+package co.com.softka.CarApp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BackendApplication {
+public class CarroAppApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BackendApplication.class, args);
+		SpringApplication.run(CarroAppApplication.class, args);
 	}
 
 }

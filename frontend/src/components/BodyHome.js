@@ -1,13 +1,10 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom'
 
 const BodyHome = () => {
-   
     window.addEventListener('scroll', () => {
         const header = document.getElementById('containerHeader');
         header.style.opacity = '1' - window.pageYOffset / 550;
     });
-    
     return (
         <main id="main">
             <section class="container">

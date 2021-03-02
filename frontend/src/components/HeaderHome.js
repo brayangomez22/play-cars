@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';  
+import React from 'react'; 
 import car from '../img/car.svg'
 
 const HeaderHome = () => {
+
     return (
         <header class="containerHeader" id="containerHeader">
             <div class="textHeader">
@@ -10,8 +10,8 @@ const HeaderHome = () => {
                     <img src={car} className="icon" alt="car"></img>
                 </p>
                 <h1 class="title">
-                    Carreras con Brayan<br></br>¡Entra Ya!<br></br>
-                    <span class="title-orange-neon text-regular">Si ganas, me ganas a mí</span>
+                    Carreras con SofkaU<br></br>¡Entra Ya!<br></br>
+                    <span class="title-orange-neon text-regular">Si ganas, te llevas una hamburguesa</span>
                 </h1>
                 <p class="description">
                     Tenemos nuevos puestos para ti<br></br>
@@ -19,7 +19,7 @@ const HeaderHome = () => {
                     No olvides que todo lo que te propongas lo puedes lograr.
                 </p>
                 <a href="#main" class="btn-link text-regular">Más información</a>
-                <Link to="/game" className="btn-link text-regular">Comenzar</Link>
+                <a href="/game" className="btn-link text-regular">Comenzar</a>
             </div>
 	    </header>
     );

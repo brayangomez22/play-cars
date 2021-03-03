@@ -43,11 +43,7 @@ public class Jugador {
     }
 
     public void ganador(){
-        if (this.vecesWinner == 0 ){
-            this.vecesWinner = 1;
-        }
-        else
-            this.vecesWinner+=1;
+        this.vecesWinner+=1;
     }
 
 }

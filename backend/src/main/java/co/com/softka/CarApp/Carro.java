@@ -4,7 +4,6 @@ public class Carro {
 
     private int idCar;
     private String Apodo;
-
     private int idCarril;
 
     public Carro(String apodo) {

@@ -1,15 +1,23 @@
 package co.com.softka.CarApp;
 
-public class Carril{
+import java.util.ArrayList;
+
+public class Carril extends Pista {
     private int idCarril;
     private int numeroCarril;
     private double porcentajeTotal;
-    private double distancia;
+    private double distancia = super.getLongitudKilometros()*1000;
 
 
-    public Carril( String apodo, String documento, String nombre, int numeroCarril, double distancia) {
+
+    public Carril(int idJuego, int numeroCarriles, double longitudKilometros, int numeroCarril, double distancia) {
+        super(idJuego, numeroCarriles, longitudKilometros);
         this.numeroCarril = numeroCarril;
         this.distancia = distancia;
+    }
+
+    public Carril(int idJuego, int numeroCarriles, double longitudKilometros) {
+        super(idJuego, numeroCarriles, longitudKilometros);
     }
 
     public int getIdCarril() {
@@ -46,9 +54,7 @@ public class Carril{
 
     public double porcentaje(double distanciaKilometros){
         double distanciaEnMetros = distanciaKilometros*1000;
-        if (porcentajeTotal ==0){
-            return this.porcentajeTotal = calcularPorcentaje(distanciaEnMetros);
-        } return this.porcentajeTotal+= calcularPorcentaje(distanciaEnMetros);
+         return this.porcentajeTotal+= calcularPorcentaje(distanciaEnMetros);
     }
 
     private double calcularPorcentaje( double distancia){
@@ -57,5 +63,13 @@ public class Carril{
         return (carro.Avanzar()*100)/distancia ;
     }
 
+
+/*
+    private void asignarGanador(int idjugador) {
+        Jugador jugadorGanador = new Conductor();
+        jugadorGanador.getIdJugador();
+        jugadorGanador.ganador();
+    }
+*/
 
 }

@@ -1,11 +1,23 @@
 package co.com.softka.CarApp;
 
+import javax.persistence.*;
+import javax.validation.constraints.Pattern;
 import java.util.ArrayList;
 
+
+@Entity
+@Table(name = "Carril")
 public class Carril extends Pista {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idCarril")
     private int idCarril;
+    @Pattern(regexp = "[0-9]+", message = "The numeroCarril only can contain numbers")
+    @Column(name = "numeroCarril")
     private int numeroCarril;
+    @Column(name = "porcentajeTotal")
     private double porcentajeTotal;
+    @Column(name = "distancia")
     private double distancia = super.getLongitudKilometros()*1000;
 
 

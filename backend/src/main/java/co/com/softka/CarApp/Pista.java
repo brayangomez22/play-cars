@@ -1,13 +1,30 @@
 package co.com.softka.CarApp;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
+@Entity
+@Table(name = "Pista")
 public class Pista {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idPista")
     private int idPista;
+    @Column(name = "idJuego")
     private int idJuego;
+    @Column(name = "numeroCarriles")
     private int numeroCarriles;
+    @NotNull
+    @NotBlank(message = "longitudKilometros can't be empty")
+    @Pattern(regexp = "[0-9]+", message = "The list only can contain numbers")
+    @Column(name = "longitudKilometros")
     private double longitudKilometros;
+    @Column(name = "podio")
     private Array[] podio;
 
     public Pista(int idJuego, int numeroCarriles, double longitudKilometros) {

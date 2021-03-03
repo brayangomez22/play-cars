@@ -11,11 +11,11 @@ public class juego {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idJuego")
     private  int idJuego;
-    @Column(name = "juegoiniciado")
-    private boolean juegoiniciado;
+    @Column(name = "juegoIniciado")
+    private boolean juegoIniciado;
 
-    public juego( boolean juegoiniciado) {
-        this.juegoiniciado = juegoiniciado;
+    public juego( boolean juegoIniciado) {
+        this.juegoIniciado = juegoIniciado;
     }
 
     public int getIdJuego() {
@@ -26,11 +26,20 @@ public class juego {
         this.idJuego = idJuego;
     }
 
-    public boolean isJuegoiniciado() {
-        return juegoiniciado;
+    public boolean isJuegoIniciado() {
+        return juegoIniciado;
     }
 
-    public void setJuegoiniciado(boolean juegoiniciado) {
-        this.juegoiniciado = juegoiniciado;
+    public void setJuegoIniciado(boolean juegoIniciado) {
+        this.juegoIniciado = juegoIniciado;
+    }
+
+    public void iniciarJuego(boolean juegoIniciado){
+        if (!juegoIniciado){
+            this.juegoIniciado=true;
+        }else{
+            System.out.println("El juego ya esta iniciado");
+        }
+
     }
 }

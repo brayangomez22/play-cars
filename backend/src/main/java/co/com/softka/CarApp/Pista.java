@@ -1,22 +1,61 @@
 package co.com.softka.CarApp;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
+@Entity
+@Table(name = "Pista")
 public class Pista {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idPista")
     private int idPista;
-    private String Name;
+    @Column(name = "idJuego")
+    private int idJuego;
+    @Column(name = "numeroCarriles")
     private int numeroCarriles;
-    private double kilometros;
-    private Object[] resultado;
-    private ArrayList<Carril> carriles;
+    @NotNull
+    @NotBlank(message = "longitudKilometros can't be empty")
+    @Pattern(regexp = "[0-9]+", message = "The list only can contain numbers")
+    @Column(name = "longitudKilometros")
+    private double longitudKilometros;
+    @Column(name = "podio")
+    private Array[] podio;
 
-
-    public Pista(String name, int numeroCarriles, double kilometros, ArrayList<Carril> carriles) {
-        Name = name;
+    public Pista(int idJuego, int numeroCarriles, double longitudKilometros) {
+        this.idJuego = idJuego;
         this.numeroCarriles = numeroCarriles;
-        this.kilometros = kilometros;
-        this.carriles = carriles;
+        this.longitudKilometros = longitudKilometros;
+    }
+
+
+    public int getIdJuego() {
+        return idJuego;
+    }
+
+    public void setIdJuego(int idJuego) {
+        this.idJuego = idJuego;
+    }
+
+    public double getLongitudKilometros() {
+        return longitudKilometros;
+    }
+
+    public void setLongitudKilometros(double longitudKilometros) {
+        this.longitudKilometros = longitudKilometros;
+    }
+
+    public Array[] getPodio() {
+        return podio;
+    }
+
+    public void setPodio(Array[] podio) {
+        this.podio = podio;
     }
 
     public int getIdPista() {
@@ -27,13 +66,7 @@ public class Pista {
         this.idPista = idPista;
     }
 
-    public String getName() {
-        return Name;
-    }
 
-    public void setName(String name) {
-        Name = name;
-    }
 
     public int getNumeroCarriles() {
         return numeroCarriles;
@@ -43,30 +76,8 @@ public class Pista {
         this.numeroCarriles = numeroCarriles;
     }
 
-    public double getKilometros() {
-        return kilometros;
-    }
 
-    public void setKilometros(double kilometros) {
-        this.kilometros = kilometros;
-    }
-
-    public Object[] getResultado() {
-        return resultado;
-    }
-
-    public void setResultado(Object[] resultado) {
-        this.resultado = resultado;
-    }
-
-    public ArrayList<Carril> getCarriles() {
-        return carriles;
-    }
-
-    public void setCarriles(ArrayList<Carril> carriles) {
-        this.carriles = carriles;
-    }
-
+/*
     private double Jugar(){
         boolean finJuego = false;
         do{
@@ -82,13 +93,9 @@ public class Pista {
         
         return 1;
     }
+*/
 
 
-    private void asignarGanador(String documento) {
-        Conductor conductorGanador = new Conductor();
-        conductorGanador.getDocumentoConductor().equals(documento);
-        conductorGanador.ganador();
-    }
 
 }
 

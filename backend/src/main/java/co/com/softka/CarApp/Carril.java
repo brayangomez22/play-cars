@@ -1,16 +1,35 @@
 package co.com.softka.CarApp;
 
-public class Carril extends Conductor{
+import javax.persistence.*;
+import javax.validation.constraints.Pattern;
+import java.util.ArrayList;
+
+
+@Entity
+@Table(name = "Carril")
+public class Carril extends Pista {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idCarril")
     private int idCarril;
+    @Pattern(regexp = "[0-9]+", message = "The numeroCarril only can contain numbers")
+    @Column(name = "numeroCarril")
     private int numeroCarril;
+    @Column(name = "porcentajeTotal")
     private double porcentajeTotal;
-    private double distancia;
+    @Column(name = "distancia")
+    private double distancia = super.getLongitudKilometros()*1000;
 
 
-    public Carril( String apodo, String documento, String nombre, int numeroCarril, double distancia) {
-        super(apodo, documento, nombre);
+
+    public Carril(int idJuego, int numeroCarriles, double longitudKilometros, int numeroCarril, double distancia) {
+        super(idJuego, numeroCarriles, longitudKilometros);
         this.numeroCarril = numeroCarril;
         this.distancia = distancia;
+    }
+
+    public Carril(int idJuego, int numeroCarriles, double longitudKilometros) {
+        super(idJuego, numeroCarriles, longitudKilometros);
     }
 
     public int getIdCarril() {
@@ -47,9 +66,7 @@ public class Carril extends Conductor{
 
     public double porcentaje(double distanciaKilometros){
         double distanciaEnMetros = distanciaKilometros*1000;
-        if (porcentajeTotal ==0){
-            return this.porcentajeTotal = calcularPorcentaje(distanciaEnMetros);
-        } return this.porcentajeTotal+= calcularPorcentaje(distanciaEnMetros);
+         return this.porcentajeTotal+= calcularPorcentaje(distanciaEnMetros);
     }
 
     private double calcularPorcentaje( double distancia){
@@ -58,5 +75,13 @@ public class Carril extends Conductor{
         return (carro.Avanzar()*100)/distancia ;
     }
 
+
+/*
+    private void asignarGanador(int idjugador) {
+        Jugador jugadorGanador = new Conductor();
+        jugadorGanador.getIdJugador();
+        jugadorGanador.ganador();
+    }
+*/
 
 }

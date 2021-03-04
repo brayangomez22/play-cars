@@ -1,4 +1,4 @@
-package co.com.softka.CarApp;
+package co.com.softka.CarApp.Entities;
 
 import javax.persistence.*;
 
@@ -9,7 +9,7 @@ public class Podio {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idPodio")
-    private int idPodio;
+    private Long idPodio;
     @Column(name = "idJuego")
     private int idJuego;
     @Column(name = "primerPuesto")
@@ -29,11 +29,11 @@ public class Podio {
     public Podio() {
     }
 
-    public int getIdPodio() {
+    public Long getIdPodio() {
         return idPodio;
     }
 
-    public void setIdPodio(int idPodio) {
+    public void setIdPodio(Long idPodio) {
         this.idPodio = idPodio;
     }
 

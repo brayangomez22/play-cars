@@ -1,4 +1,4 @@
-package co.com.softka.CarApp;
+package co.com.softka.CarApp.Entities;
 
 import com.sun.istack.NotNull;
 
@@ -7,7 +7,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
-@Entity
+
 @Table(name = "Jugador")
 public class Jugador {
 

@@ -1,4 +1,4 @@
-package co.com.softka.CarApp;
+package co.com.softka.CarApp.Entities;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -8,7 +8,7 @@ import javax.validation.constraints.Size;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-@Entity
+
 @Table(name = "Pista")
 public class Pista {
     @Id

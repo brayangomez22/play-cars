@@ -1,4 +1,4 @@
-package co.com.softka.CarApp;
+package co.com.softka.CarApp.Entities;
 
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;

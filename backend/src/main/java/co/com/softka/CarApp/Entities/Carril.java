@@ -1,11 +1,10 @@
-package co.com.softka.CarApp;
+package co.com.softka.CarApp.Entities;
 
 import javax.persistence.*;
 import javax.validation.constraints.Pattern;
-import java.util.ArrayList;
 
 
-@Entity
+
 @Table(name = "Carril")
 public class Carril extends Pista {
     @Id

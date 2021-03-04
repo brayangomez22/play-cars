@@ -1,4 +1,4 @@
-package co.com.softka.CarApp;
+package co.com.softka.CarApp.Entities;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -6,7 +6,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
-@Entity
+
 @Table(name = "Carro")
 public class Carro {
 

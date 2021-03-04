@@ -25,7 +25,8 @@ p {
 /* ------------------------- */
 /* HEADER */
 /* ------------------------- */
-.containerHeader {
+.containerHeader ,
+.containerGame {
 	width: 100%;
 	height: 100vh;
 	display: flex;
@@ -41,6 +42,17 @@ p {
 	background-position: center;
 	background-attachment: fixed;
 	box-shadow: inset 0 0 100px 150px rgba(0,0,0,8);
+}
+
+.containerGameCar{
+	position: relative;
+	width: 100%;
+}
+
+.containerGame{
+	position: relative;
+	height: 100%;
+	padding: 50px;
 }
 
 .textHeader {
@@ -175,251 +187,139 @@ main .letter-capital {
 /* ------------------------- */
 /* Game */
 /* ------------------------- */
-.headerGame{
-	position: relative;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 70px;
-	padding: 15px;
-	background: #000;
-	color: #fff;
+
+.tileGame{
+	position: absolute;
+	top: 1%;
+	width: 80%;
+	height: 80px;
+	background: transparent;
+	font-size: 26px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	border-radius: 5px;
+	box-shadow: inset 0px 10px 60px 0px #4D2C04,
+				0px 10px 30px 0px #4D2C04;
+	margin: 70px 0;
+}
+
+.linkHome{
+	color: white;
+	text-decoration: none;
+	padding-right: 7px;
+}
+
+.containerFormGame {
+	background-color: rgba(0, 0, 0, 0.7);
+	width: 80%;
+	margin: 0 auto;
+	padding: 40px;	
+	border-radius: 10px;
+	box-shadow: inset 0px 7px 30px 0px #4D2C04;
+	margin-top: 120px;
+}
+
+.containerFormGame .title {
+	font-size: 50px;
+	font-weight: normal;
+	margin-bottom: 40px;
 	text-align: center;
-	font-size: 30px;
-	font-weight: 700;
-	padding-top: 30px;
-}
-
-.containerGame{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
-	background-image: url(../img/bg-header-black.jpg);
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
-	box-shadow: inset 0 0 100px 150px rgba(0,0,0,8);
-}
-
-.containerGame .container{
-    position: relative;
-    width: 800px;
-    height: 500px;
-    background: rgba(13, 17, 23, 0.5);
-    box-shadow: 0 2px 5px #fff;
-    overflow: hidden;
-    z-index: 1000;
-}
-
-.containerGame .container .players{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-}
-
-.containerGame .container .players .imgBx{
-    position: relative;
-    width: 50%;
-    height: 100%;
-    transition: 0.5s;
-}
-
-.containerGame .container .players .imgBx img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.containerGame .container .players .formBx{
-    position: relative;
-    width: 50%;
-    height: 100%;
-    background: rgba(13, 17, 23, 0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
-    transition: 0.5s;
-}
-
-.containerGame .container .players .formBx form h2,
-.containerGame .container .players .formBx div h2{
-    font-size: 18px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-align: center;
-    width: 100%;
-    margin-bottom: 10px;
-    color: #3485ff;
-}
-
-.containerGame .container .players .formBx form input{
-    position: relative;
-    width: 100%;
-    padding: 10px;
-    background: #fff;
-    color: #333;
-    border: none;
-    outline: none;
-    box-shadow: none;
-    margin: 8px 0;
-    font-size: 14px;
-    letter-spacing: 1px;
-    font-weight: 300;
-}
-
-.containerGame .container .players .formBx form input[type="submit"]{
-    max-width: 100px;
-    background: #3485ff;
-    color: #fff;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    transition: 0.5s;
-}
-
-.containerGame .container .players .formBx form .watch,
-.containerGame .container .players .formBx div .watch{
-    position: relative;
-    margin-top: 20px;
-    font-size: 12px;
-    letter-spacing: 1px;
-    color: rgb(204, 197, 197);
-    text-transform: uppercase;
-    font-weight: 300;
-}
-
-.containerGame .container .players .formBx form .watch a,
-.containerGame .container .players .formBx div .watch a{
-    font-weight: 600;
-    text-decoration: none;
-    color: #3485ff;
-}
-
-.containerGame .container .players .box{
-	width: 320px;
-	border-bottom: 20px solid #3485ff;
-	border-bottom-left-radius: 10px;
-	border-bottom-right-radius: 10px;
-}
-
-.containerGame .container .players .box h3{
 	color: #fff;
-	background: #3485ff;
-	padding: 10px 20px;
-	font-size: 20px;
-	font-weight: 700;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
 }
 
-.containerGame .container .players .box ul{
-	position: relative;
-	background: #fff;
+.inputGame{
+	margin-top: 10px;
+	width: 100%;
+	height: 50px;
+	border-radius: 5px;
+	outline: none;
+	border: none;
+	background: transparent;
+	box-shadow: inset 0px 1px 3px 0px #4D2C04,
+				0px 1px 3px 0px #4D2C04;
+	padding-left: 15px;
+	color: #fff;
 }
 
-.containerGame .container .players .box ul li{
-	list-style: none;
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button{
+	-webkit-appearance: none;
+}
+
+.inputGame::placeholder{
+  	color: #fff;
+}
+
+.inputGame:focus{
+  	border: none;
+}
+
+.btnGame{
+	margin-top: 22px;
+}
+
+.tileNames{
+	margin-top: 35px;
+}
+
+table {
+	text-align: left;
+	line-height: 40px;
+	border-collapse: separate;
+	border-spacing: 0;
+	margin: 50px auto;
+	border-radius: .25rem;
+	padding: 35px;
+	background-color: rgba(0, 0, 0, 0.7);
+	width: 80%;
+	box-shadow: inset 0px 7px 30px 0px #4D2C04;
+	margin-top: 120px;
+}
+
+th {
+  	font-weight: 500;
+}
+
+thead tr .gomez {
+	border-bottom: 3px solid #4D2C04;
+	color: #fff;
+}
+
+tbody tr:hover {
+	background-color: #4D2C04;
+	cursor: default;
+}
+
+tbody td {
+	color: #fff;
+	border-bottom: 1px solid #4D2C04;
+	padding: 5px;
+}
+
+
+.button {
+	color: #fff;
+	cursor: pointer;
+	vertical-align: middle;
+	margin-top: -4px;
 	padding: 10px;
-	width: 100%;
-	background: #fff;
-	box-shadow: 0 5px 25px rgba(0, 0, 0, .1);
-	transition: transform 0.5s;
+	border: none;
+	outline: none;
+	border-radius: 4px;
+	transition: 0.2s ease;
 }
 
-.containerGame .container .players .box ul:hover li{
-	opacity: 0.2;
+.edit {
+  	background: #dc2a2a;
 }
 
-.containerGame .container .players .box ul li:hover{
-	transform: scale(1.1);
-	z-index: 100;
-	background: #3485ff;
-	box-shadow: 0 5px 25px rgba(0, 0, 0, .2);
-	color: #fff;
-	opacity: 1;
+.delete {
+  	background: #0a79df;
 }
 
-.containerGame .container .players .box ul li span{
-	width: 20px;
-	height: 20px;
-	text-align: center;
-	line-height: 20px;
-	background: #3485ff;
-	color: #fff;
-	display: inline-block;
-	border-radius: 50%;
-	margin-right: 10px;
-	font-size: 12px;
-	font-weight: 600;
-	transform: translateY(-2px);
-}
-
-.containerGame .container .players .box ul li:hover span{
-	background: #fff;
-	color: #3485ff;
-}
-
-.containerGame .container .playerList{
-    pointer-events: none;
-} 
-
-.containerGame .container.active .playerList{
-    pointer-events: initial;
-}
-
-.containerGame .container .playerList .formBx{
-    left: 100%;
-}
-
-.containerGame .container.active .playerList .formBx{
-    left: 0;
-}
-
-.containerGame .container .playerList .imgBx{
-    left: -100%;
-}
-
-.containerGame .container.active .playerList .imgBx{
-    left: 0;
-}
-
-
-.containerGame .container .createPlayer .formBx{
-    left: 0;
-}
-
-.containerGame .container.active .createPlayer .formBx{
-    left: 100%;
-}
-
-.containerGame .container .createPlayer .imgBx{
-    left: 0;
-}
-
-.containerGame .container.active .createPlayer .imgBx{
-    left: -100%;
-}
-
-@media (max-width: 991px){
-    .containerGame .container{
-        max-width: 400px;
-    }
-    .containerGame .container .imgBx{
-        display: none;
-    }
-    .containerGame .container .players .formBx{
-        width: 100%;
-    }
+.edit:hover,
+.delete:hover{
+  	transform: scale(1.1); 
 }

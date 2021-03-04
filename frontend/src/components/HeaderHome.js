@@ -1,5 +1,5 @@
 import React from 'react'; 
-import car from '../img/car.svg'
+import car from '../img/car.svg';
 
 const HeaderHome = () => {
 

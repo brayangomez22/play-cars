@@ -47,6 +47,7 @@ p {
 .containerGameCar{
 	position: relative;
 	width: 100%;
+	margin-top: 80px;
 }
 
 .containerGame{
@@ -133,7 +134,8 @@ main {
 
 main .container {
 	padding: 50px 0;
-	width: 90%;
+	padding-top: 190px;
+	width: 70%;
 	max-width: 1000px;
 	margin: auto;
 }
@@ -150,7 +152,7 @@ main .subtitle-h2, main .letter-capital {
 }
 
 main .letter-capital {
-	font-size: 55px;
+	font-size: 40px;
 	font-family: serif;
 	margin-right: 10px;
 	line-height: 15px;

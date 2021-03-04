@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 const BodyHome = () => {
     window.addEventListener('scroll', () => {
@@ -7,14 +8,18 @@ const BodyHome = () => {
     });
     return (
         <main id="main">
-            <section class="container">
-                <h2 class="subtitle-h2">Servicios</h2>
-                <p><span class="letter-capital">P</span>ara despejar la cabeza orem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem rerum provident distinctio dolores nisi corporis! Adipisci inventore nostrum exercitationem id repellendus maxime voluptate recusandae autem, earum accusamus, non, cupiditate nihil!</p>
-
-                <p>Doloremque voluptatum incidunt architecto explicabo voluptate eveniet, accusantium odit alias est fugiat eum consectetur dolor consequatur nihil at voluptatibus inventore, temporibus tempora?
-                Est itaque, corrupti, reprehenderit placeat aut deleniti a vel ipsum perspiciatis accusamus quasi, quo earum consequatur. Cum distinctio quae sapiente fuga laboriosam.</p>
-
-                <p>Cupiditate nam dolore inventore at dicta molestiae, adipisci voluptatem nihil asperiores, sunt debitis? Rerum, sed impedit qui sapiente eaque nesciunt voluptas consequuntur!</p>
+            <section className="container">
+                <h2 className="subtitle-h2">Descripción</h2>
+                <p><span className="letter-capital">El</span> juego se compone de un número de jugadores
+                que se proponen competir en una pista de carreras. A cada jugador se le asigna un ávatar de
+                conductor con su respectivo auto, permitiendole entrar en esta intensa carrera que viene incluída
+                en los MiniJuegos de SofkaU.</p>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <Link to="/history" className="letter-capital linkHome"><span>Historial</span></Link>
             </section>
         </main>
     );
